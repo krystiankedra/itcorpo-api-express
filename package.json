@@ -1,0 +1,10 @@
+{
+  "name": "itcorpo-api-express",
+  "description": "Professional trainings on JavaScript, TypeScript and many more...",
+  "private": true,
+  "author": {
+    "name": "Tomasz Ducin",
+    "email": "tomasz@ducin.it",
+    "url": "http://ducin.it"
+  },
+}
