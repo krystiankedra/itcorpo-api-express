@@ -1,0 +1,452 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name": "Management"
+    },
+    {
+      "id": 2,
+      "name": "Sales"
+    },
+    {
+      "id": 3,
+      "name": "Accounting"
+    },
+    {
+      "id": 4,
+      "name": "Human Resources"
+    },
+    {
+      "id": 5,
+      "name": "Marketing"
+    },
+    {
+      "id": 6,
+      "name": "Development"
+    },
+    {
+      "id": 7,
+      "name": "Support"
+    }
+  ],
+  "geo": {
+    "US": "United States of America",
+    "UK": "United Kingdom",
+    "DE": "Germany",
+    "FR": "France",
+    "NL": "Netherlands",
+    "PL": "Poland",
+    "IT": "Italy",
+    "ES": "Spain"
+  },
+  "offices": [
+    {
+      "country": "Spain",
+      "city": "Madrid",
+      "address": "Gollum Arrabal 197",
+      "estate": {
+        "owner": "24/7 Estates Group",
+        "phone": "950062602",
+        "monthlyRental": 10000,
+        "account": "ES08 9100 0440 0190 4099 0044"
+      },
+      "imgURL": "f9bffd0a-5a2e-4c2d-956e-bdfea3879f82"
+    },
+    {
+      "country": "Germany",
+      "city": "Dresden",
+      "address": "Felicitas Heights 128",
+      "estate": {
+        "owner": "Next-Generation Estates Group",
+        "phone": "(00143) 9907973",
+        "monthlyRental": 28000,
+        "account": "DE46 3308 6002 0164 8380 89"
+      },
+      "imgURL": "c80cfb10-2e96-420a-9464-62721df2ccf8"
+    },
+    {
+      "country": "Poland",
+      "city": "Warszawa",
+      "address": "ul. Dina Islands 13",
+      "estate": {
+        "owner": "Collaborative Estates Inc",
+        "phone": "87-171-09-48",
+        "monthlyRental": 8000,
+        "account": "PL77 1004 1026 9700 8204 0053 5761"
+      },
+      "imgURL": "fc6df1cd-1a38-4dd8-ac41-425b87b91d8f"
+    },
+    {
+      "country": "United States of America",
+      "city": "Milpitas",
+      "address": "Vicente Port 23",
+      "estate": {
+        "owner": "Vertical Estates Group",
+        "phone": "312-153-7998",
+        "monthlyRental": 39000,
+        "account": "US74 5476 0004 9697 6686 0766"
+      },
+      "imgURL": "e50e9d70-e8c2-4fe1-a58d-5baf1d7eaff8"
+    },
+    {
+      "country": "Italy",
+      "city": "Torino",
+      "address": "Amerigo Piazza 58",
+      "estate": {
+        "owner": "Killer Estates LLC",
+        "phone": "+92 12 8493545",
+        "monthlyRental": 14000,
+        "account": "IT84 B276 2200 2230 6849 6676 548"
+      },
+      "imgURL": "2dafa62c-847a-45d3-98f5-b936006292a1"
+    },
+    {
+      "country": "Germany",
+      "city": "Darmstadt",
+      "address": "Mäder Square 132",
+      "estate": {
+        "owner": "Vertical Estates And Sons",
+        "phone": "+49-0926-93960769",
+        "monthlyRental": 9000,
+        "account": "DE04 0030 0104 7102 4608 63"
+      },
+      "imgURL": "b3336dfe-9cab-4060-a648-f1efa8714aa0"
+    },
+    {
+      "country": "Spain",
+      "city": "Getafe",
+      "address": "María Teresa Torrente 104",
+      "estate": {
+        "owner": "Web-Enabled Estates LLC",
+        "phone": "937-973-311",
+        "monthlyRental": 7000,
+        "account": "ES35 5801 8007 6579 9013 0047"
+      },
+      "imgURL": "3d76e954-e9bb-4356-baab-d0890c6a6a7d"
+    },
+    {
+      "country": "United States of America",
+      "city": "Boston",
+      "address": "Kub Estate 198",
+      "estate": {
+        "owner": "One-To-One Estates Inc",
+        "phone": "(629) 937-2723",
+        "monthlyRental": 31000,
+        "account": "US33 7901 6208 0126 3565 0429"
+      },
+      "imgURL": "bfaef6af-5757-4e20-80dc-c9e9bda639ce"
+    },
+    {
+      "country": "United Kingdom",
+      "city": "Manchester",
+      "address": "Delbert Ridges 89",
+      "estate": {
+        "owner": "User-Centric Estates Inc",
+        "phone": "0941 379 7327",
+        "monthlyRental": 22000,
+        "account": "GB44 NYSR 0619 5630 0945 96"
+      },
+      "imgURL": "2df04856-2904-449d-9109-73572c181f7b"
+    },
+    {
+      "country": "United Kingdom",
+      "city": "London",
+      "address": "Kuvalis Mews 33",
+      "estate": {
+        "owner": "Wireless Estates Group",
+        "phone": "01270 91013",
+        "monthlyRental": 32000,
+        "account": "GB88 FHMM 6030 2020 9980 03"
+      },
+      "imgURL": "d8a5a87d-cb20-491a-805f-e7a4d57665c8"
+    },
+    {
+      "country": "United States of America",
+      "city": "Dallas",
+      "address": "Jaquelin Brook 8",
+      "estate": {
+        "owner": "Seamless Estates And Sons",
+        "phone": "1-438-946-7686 x76859",
+        "monthlyRental": 36000,
+        "account": "US61 0302 5865 9808 1190 8683"
+      },
+      "imgURL": "2bc90b8b-440b-4630-a629-362d3d307803"
+    },
+    {
+      "country": "Poland",
+      "city": "Kraków",
+      "address": "ul. Włodarczyk Pass 166",
+      "estate": {
+        "owner": "Turn-Key Estates And Sons",
+        "phone": "15-878-89-82",
+        "monthlyRental": 9000,
+        "account": "PL92 0610 1246 2002 0065 0059 7418"
+      },
+      "imgURL": "03f7214b-a40a-4b1b-a2e1-65c08648b9e1"
+    },
+    {
+      "country": "United States of America",
+      "city": "San Francisco",
+      "address": "Jarred Grove 6",
+      "estate": {
+        "owner": "Vertical Estates Group",
+        "phone": "755-178-9971 x64765",
+        "monthlyRental": 18000,
+        "account": "US44 0703 0902 3864 8004 3097"
+      },
+      "imgURL": "b374f390-c5ee-457d-860b-48aa49add334"
+    },
+    {
+      "country": "Poland",
+      "city": "Łódź",
+      "address": "Skwer Hubert Corners 95",
+      "estate": {
+        "owner": "World-Class Estates And Sons",
+        "phone": "46-237-94-65",
+        "monthlyRental": 29000,
+        "account": "PL23 2710 0458 7154 9540 5109 0892"
+      },
+      "imgURL": "12961f3f-21a8-448d-a5cb-036b1b44bb86"
+    },
+    {
+      "country": "France",
+      "city": "Paris",
+      "address": "Chloé de la Victoire 163",
+      "estate": {
+        "owner": "B2B Estates Group",
+        "phone": "+33 437749045",
+        "monthlyRental": 22000,
+        "account": "FR76 0128 8444 5824 5987 5267 313"
+      },
+      "imgURL": "69325e2f-b474-4e6a-833e-ca67b3fe8ae0"
+    },
+    {
+      "country": "France",
+      "city": "Rennes",
+      "address": "Lilou de Provence 194",
+      "estate": {
+        "owner": "Global Estates LLC",
+        "phone": "+33 319697608",
+        "monthlyRental": 20000,
+        "account": "FR26 3423 0492 6377 99D6 P6X3 228"
+      },
+      "imgURL": "01c9f654-0243-45cf-baae-73f06e0e6e85"
+    },
+    {
+      "country": "Poland",
+      "city": "Gdańsk",
+      "address": "ul. Zachary Trafficway 136",
+      "estate": {
+        "owner": "Turn-Key Estates LLC",
+        "phone": "52-605-51-81",
+        "monthlyRental": 7000,
+        "account": "PL47 3604 9014 0088 0098 7007 7651"
+      },
+      "imgURL": "7a4d9dea-aa65-4b66-938d-d0b083554215"
+    },
+    {
+      "country": "Poland",
+      "city": "Szczecin",
+      "address": "ul. Czajkowski Greens 8",
+      "estate": {
+        "owner": "Rich Estates Group",
+        "phone": "24-638-88-50",
+        "monthlyRental": 11000,
+        "account": "PL73 0140 0184 8657 0599 9600 3001"
+      },
+      "imgURL": "8eee784c-0764-42e9-a74f-3020fb74fe72"
+    },
+    {
+      "country": "Spain",
+      "city": "Granada",
+      "address": "Alicea Monte 135",
+      "estate": {
+        "owner": "User-Centric Estates And Sons",
+        "phone": "906.169.284",
+        "monthlyRental": 6000,
+        "account": "ES45 9050 0106 5259 0051 5570"
+      },
+      "imgURL": "cecf5975-1624-43f6-9764-945d7ec2aa3a"
+    },
+    {
+      "country": "Poland",
+      "city": "Lublin",
+      "address": "Skwer Michalak Flats 15",
+      "estate": {
+        "owner": "Extensible Estates Group",
+        "phone": "32-420-70-62",
+        "monthlyRental": 12000,
+        "account": "PL55 0207 0713 2096 0300 5148 0140"
+      },
+      "imgURL": "c6a0cbb9-cda3-4fa4-a62a-98a7b427cef7"
+    },
+    {
+      "country": "Netherlands",
+      "city": "Utrecht",
+      "address": "Jan park 8",
+      "estate": {
+        "owner": "Granular Estates Inc",
+        "phone": "3122996941",
+        "monthlyRental": 33000,
+        "account": "NL13 HGRC 5525 0075 85"
+      },
+      "imgURL": "b1a6f7f0-9eff-4fdb-a997-c36f724f759f"
+    },
+    {
+      "country": "France",
+      "city": "Brest",
+      "address": "Baptiste des Panoramas 22",
+      "estate": {
+        "owner": "B2C Estates And Sons",
+        "phone": "+33 581298950",
+        "monthlyRental": 29000,
+        "account": "FR32 4042 9000 114O 0605 2264 250"
+      },
+      "imgURL": "476adb73-53d8-442d-93f2-92771e9f50be"
+    },
+    {
+      "country": "Netherlands",
+      "city": "Den Haag",
+      "address": "Vermeulen park 168",
+      "estate": {
+        "owner": "Strategic Estates Group",
+        "phone": "0648283821",
+        "monthlyRental": 20000,
+        "account": "NL56 CLAL 0003 2400 70"
+      },
+      "imgURL": "faa8d59d-7a9f-47dd-813d-db77aabaa5bc"
+    },
+    {
+      "country": "United Kingdom",
+      "city": "Reading",
+      "address": "Mckayla Via 80",
+      "estate": {
+        "owner": "Granular Estates Group",
+        "phone": "0958 202 9291",
+        "monthlyRental": 28000,
+        "account": "GB68 JZVF 9822 1039 0057 68"
+      },
+      "imgURL": "c051bbea-7312-44c3-8f84-395bbf3afaa8"
+    },
+    {
+      "country": "Italy",
+      "city": "Roma",
+      "address": "Kai Piazza 138",
+      "estate": {
+        "owner": "Mission-Critical Estates LLC",
+        "phone": "+79 65 65206010",
+        "monthlyRental": 10000,
+        "account": "IT52 C792 6028 0775 1266 0381 66Z"
+      },
+      "imgURL": "22352e5f-97bf-4c37-837a-8524df5e4c38"
+    },
+    {
+      "country": "United Kingdom",
+      "city": "Bracknell",
+      "address": "Monahan Route 167",
+      "estate": {
+        "owner": "Cross-Platform Estates Inc",
+        "phone": "0500 505341",
+        "monthlyRental": 43000,
+        "account": "GB72 PYTE 8950 6604 0300 14"
+      },
+      "imgURL": "91545c15-8ac5-48c0-a32a-d295e1d72427"
+    },
+    {
+      "country": "United Kingdom",
+      "city": "Plymouth",
+      "address": "Kihn Greens 77",
+      "estate": {
+        "owner": "One-To-One Estates And Sons",
+        "phone": "01239 68025",
+        "monthlyRental": 39000,
+        "account": "GB47 QNHE 9124 6069 9103 54"
+      },
+      "imgURL": "b7c56b40-cb90-4922-83a6-8e8440fa1855"
+    },
+    {
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "address": "Peters laan 24",
+      "estate": {
+        "owner": "Innovative Estates LLC",
+        "phone": "(0777) 686324",
+        "monthlyRental": 16000,
+        "account": "NL09 FIWO 6600 9003 79"
+      },
+      "imgURL": "eb20aeac-ae3c-48a8-900e-aa0b60f44b1c"
+    },
+    {
+      "country": "France",
+      "city": "Lille",
+      "address": "Mathilde Saint-Jacques 3",
+      "estate": {
+        "owner": "Viral Estates Inc",
+        "phone": "0522169660",
+        "monthlyRental": 17000,
+        "account": "FR35 0245 0380 851X 9973 4996 969"
+      },
+      "imgURL": "e211db0e-dd46-4c8f-9897-89a4d71a138a"
+    },
+    {
+      "country": "Poland",
+      "city": "Radom",
+      "address": "ul. Wincenty Bypass 14",
+      "estate": {
+        "owner": "Dynamic Estates Inc",
+        "phone": "23-503-95-78",
+        "monthlyRental": 9000,
+        "account": "PL23 2870 2011 3572 0576 4376 3002"
+      },
+      "imgURL": "36a203d5-9942-41ca-b0a6-b4c32bfdd8ed"
+    },
+    {
+      "country": "Poland",
+      "city": "Wrocław",
+      "address": "Skwer Gwido Trail 186",
+      "estate": {
+        "owner": "Magnetic Estates Inc",
+        "phone": "65-327-10-13",
+        "monthlyRental": 11000,
+        "account": "PL92 2007 0083 9052 6045 2900 7009"
+      },
+      "imgURL": "da206676-2b06-4bac-bed3-a911362890cd"
+    },
+    {
+      "country": "Spain",
+      "city": "Valencia",
+      "address": "Arriaga Masía 79",
+      "estate": {
+        "owner": "Plug-And-Play Estates And Sons",
+        "phone": "974-222-628",
+        "monthlyRental": 7000,
+        "account": "ES73 8180 2002 9015 3481 4490"
+      },
+      "imgURL": "65ff0c0a-542d-4763-8145-99288afdd869"
+    },
+    {
+      "country": "Germany",
+      "city": "München",
+      "address": "Paukner Vista 194",
+      "estate": {
+        "owner": "Seamless Estates Group",
+        "phone": "(0015) 355140258",
+        "monthlyRental": 24000,
+        "account": "DE24 0022 0070 0880 0546 98"
+      },
+      "imgURL": "6e363874-dc9a-4cd0-8f71-17ce3d06d604"
+    },
+    {
+      "country": "Germany",
+      "city": "Frankfurt am Main",
+      "address": "Jonah Roads 81",
+      "estate": {
+        "owner": "24/7 Estates LLC",
+        "phone": "(0627) 685751836",
+        "monthlyRental": 23000,
+        "account": "DE46 2056 0097 0400 0530 03"
+      },
+      "imgURL": "71e758f2-8d3b-4391-a014-8e64b5d27400"
+    }
+  ]
+}

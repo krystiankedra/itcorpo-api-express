@@ -7,4 +7,21 @@
     "email": "tomasz@ducin.it",
     "url": "http://ducin.it"
   },
+  "scripts": {
+    "__base": "json-server svc/__base/db.json -p 3010",
+    "svc-employees-script": "node ./svc/employees/server -p 3011",
+    "svc-employees": "json-server svc/employees/db.json -p 3011 --static ./svc/employees",
+    "svc-projects": "json-server svc/projects/db.json -p 3012 --static ./svc/projects",
+    "svc-benefits": "json-server svc/benefits/db.json -p 3013 --static ./svc/benefits",
+    "svc-geo": "json-server svc/geo/db.json -p 3014 --static ./svc/geo",
+    "svc-skills": "json-server svc/skills/db.json -p 3015 --static ./svc/skills",
+    "all": "node run-all"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.0.0",
+    "express": "^4.17.1",
+    "json-server": "^0.16.1",
+    "npm-run": "^5.0.1"
+  }
 }
