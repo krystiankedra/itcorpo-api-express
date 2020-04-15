@@ -13,7 +13,20 @@ const getDataForBenefitById = async (id) => {
 }
 
 const getDataForBenefits = async () => {
-  return await getRequest(benefitsURL())
+
+  const parsedBenefits = (benefit) => ({
+    id: benefit.id,
+    city: benefit.city,
+    country: benefit.country,
+    service: benefit.service,
+    subscribedAtDate: benefit.subscribedAtDate,
+    name: benefit.beneficiary.name,
+    email: benefit.beneficiary.email,
+    cost: benefit.monthlyFee
+  })
+
+  const result = await getRequest(benefitsURL())
+  return result.map(benefit => parsedBenefits(benefit))
 }
 
 const getJSONDataForBenefits = () => {
@@ -22,6 +35,7 @@ const getJSONDataForBenefits = () => {
   const fetchedCountries = countryCodeAndExtensions.flatMap((code) => {
     return JSON.parse(fileReader.getContent(file(code)))
   })
+
   return fetchedCountries
 }
 
