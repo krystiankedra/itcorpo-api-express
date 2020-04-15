@@ -1,6 +1,6 @@
 const { getDataForEmployee } = require('./employees')
 const { getDataForProject } = require('./projects')
-const { getDataForBenefits, getJSONDataForBenefits, getCSVDataForBenefits } = require('./benefits')
+const { getDataForBenefits, getJSONDataForBenefits, getCSVDataForBenefits, getDataForBenefitById } = require('./benefits')
 
 const getMergedDataEmployeesToProject = async (projectId) => {
   const project = await getDataForProject(projectId)
@@ -19,15 +19,34 @@ const getBenefits = async () => {
     getDataForBenefits(),
     getJSONDataForBenefits(),
     getCSVDataForBenefits()
-  ]) 
-  return {
+  ])
+  return [
     ...benefits,
     ...benefitsCSV,
     ...benefitsJSON
+  ]
+}
+
+const getBenefit = async (id) => {
+  const [ benefit, benefitsJSON, benefitsCSV ] = await Promise.all([
+    getDataForBenefitById(id),
+    getJSONDataForBenefits(),
+    getCSVDataForBenefits()
+  ])
+  const getBenefitsById = (source, id) => {
+    return source.filter(obj => obj.id === id)
+  }
+  const benefitFromJSON = getBenefitsById(benefitsJSON, id)
+  const benefitFromCSV = getBenefitsById(benefitsCSV, id)
+  return {
+    benefit,
+    benefitFromJSON,
+    benefitFromCSV
   }
 }
 
 module.exports = {
   getMergedDataEmployeesToProject,
-  getBenefits
+  getBenefits,
+  getBenefit
 }
