@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const PORT = 3010
 
-const { getMergedDataEmployeesToProject, getBenefits } = require('./api/index')
+const { getMergedDataEmployeesToProject, getBenefits, getBenefit } = require('./api/index')
 
 app.get('/projects/:id', async (req, res, next) => {
   try {
@@ -23,10 +23,18 @@ app.get('/benefits', async (req, res, next) => {
   } catch (error) {
     res.status(400).send(error)
   }
-}) 
+})
+
+app.get('/benefits/:id', async (req, res, next) => {
+  try {
+    const benefit = await getBenefit(req.params.id)
+    res.send(benefit)
+    next()
+  } catch (error) {
+    res.status(400).send(error)
+  }
+})
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`)
 })
-
-

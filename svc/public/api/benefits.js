@@ -1,4 +1,4 @@
-const { benefitsURL } = require('./config')
+const { benefitsURL, benefitURL } = require('./config')
 const { getRequest } = require('./requests')
 const { FileReader } = require('./../FileReader/fileReader')
 const csv = require('csvtojson')
@@ -6,6 +6,10 @@ const path = require("path")
 
 const file = (countryCodeAndExtension) => {
   return path.resolve(__dirname, `../../../dataImports/benefits-${countryCodeAndExtension}`)
+}
+
+const getDataForBenefitById = async (id) => {
+  return await getRequest(benefitURL(id))
 }
 
 const getDataForBenefits = async () => {
@@ -35,5 +39,6 @@ const getCSVDataForBenefits = async () => {
 module.exports = {
   getDataForBenefits,
   getJSONDataForBenefits,
-  getCSVDataForBenefits
+  getCSVDataForBenefits,
+  getDataForBenefitById
 }
