@@ -4,8 +4,11 @@ const employeeDetailsURL = employeeId => `http://localhost:3011/employees/${empl
 
 const benefitsURL = () => `http://localhost:3013/benefits`
 
+const benefitURL = id => `http://localhost:3013/benefits/${id}`
+
 module.exports = {
   projectDetailsURL,
   employeeDetailsURL,
-  benefitsURL
+  benefitsURL,
+  benefitURL
 }
