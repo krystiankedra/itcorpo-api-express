@@ -1,4 +1,4 @@
-const { benefitsURL } = require('./config')
+const { benefitsURL, benefitURL } = require('./config')
 const { getRequest } = require('./requests')
 const { FileReader } = require('./../FileReader/fileReader')
 const csv = require('csvtojson')
@@ -6,6 +6,17 @@ const path = require("path")
 
 const file = (countryCodeAndExtension) => {
   return path.resolve(__dirname, `../../../dataImports/benefits-${countryCodeAndExtension}`)
+}
+
+const mapperCountries = (source) => {
+  return source.reduce((acc, val) => {
+    acc.push(...val)
+    return acc
+  }, [])
+}
+
+const getDataForBenefitById = async (id) => {
+  return await getRequest(benefitURL(id))
 }
 
 const getDataForBenefits = async () => {
@@ -18,7 +29,7 @@ const getJSONDataForBenefits = () => {
   const fetchedCountries = countryCodeAndExtensions.map((code) => {
     return JSON.parse(fileReader.getContent(file(code)))
   })
-  return fetchedCountries
+  return mapperCountries(fetchedCountries)
 }
 
 const getCSVDataForBenefits = async () => {
@@ -26,11 +37,13 @@ const getCSVDataForBenefits = async () => {
   const fetchedCountries = countryCodeAndExtensions.map(code => {
     return csv().fromFile(file(code))
   })
-  return await Promise.all(fetchedCountries)
+  const result = await Promise.all(fetchedCountries)
+  return mapperCountries(result)
 }
 
 module.exports = {
   getDataForBenefits,
   getJSONDataForBenefits,
-  getCSVDataForBenefits
+  getCSVDataForBenefits,
+  getDataForBenefitById
 }
