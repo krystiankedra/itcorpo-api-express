@@ -8,13 +8,6 @@ const file = (countryCodeAndExtension) => {
   return path.resolve(__dirname, `../../../dataImports/benefits-${countryCodeAndExtension}`)
 }
 
-const mapperCountries = (source) => {
-  return source.reduce((acc, val) => {
-    acc.push(...val)
-    return acc
-  }, [])
-}
-
 const getDataForBenefitById = async (id) => {
   return await getRequest(benefitURL(id))
 }
@@ -26,19 +19,21 @@ const getDataForBenefits = async () => {
 const getJSONDataForBenefits = () => {
   const fileReader = new FileReader()
   const countryCodeAndExtensions = [ 'DE.json', 'PL.json']
-  const fetchedCountries = countryCodeAndExtensions.map((code) => {
+  const fetchedCountries = countryCodeAndExtensions.flatMap((code) => {
     return JSON.parse(fileReader.getContent(file(code)))
   })
-  return mapperCountries(fetchedCountries)
+  return fetchedCountries
 }
 
 const getCSVDataForBenefits = async () => {
   const countryCodeAndExtensions = [ 'UK.csv', 'FR.csv']
-  const fetchedCountries = countryCodeAndExtensions.map(code => {
+  const fetchedCountries = countryCodeAndExtensions.flatMap(code => {
     return csv().fromFile(file(code))
   })
   const result = await Promise.all(fetchedCountries)
-  return mapperCountries(result)
+
+  return result.flat()
+
 }
 
 module.exports = {

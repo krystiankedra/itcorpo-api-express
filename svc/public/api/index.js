@@ -19,12 +19,9 @@ const getBenefits = async () => {
     getDataForBenefits(),
     getJSONDataForBenefits(),
     getCSVDataForBenefits()
-  ])
-  return [
-    ...benefits,
-    ...benefitsCSV,
-    ...benefitsJSON
-  ]
+  ]) 
+
+  return [...benefits, ...benefitsJSON, ...benefitsCSV]
 }
 
 const getBenefit = async (id) => {
@@ -43,7 +40,7 @@ const getBenefit = async (id) => {
     benefitFromJSON,
     benefitFromCSV
   }
-}
+} 
 
 module.exports = {
   getMergedDataEmployeesToProject,
