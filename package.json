@@ -9,7 +9,7 @@
   },
   "scripts": {
     "__base": "json-server svc/__base/db.json -p 3010",
-    "svc-public": "node svc/public/server -p 3010",
+    "svc-public": "nodemon svc/public/server -p 3010",
     "svc-employees-script": "node ./svc/employees/server -p 3011",
     "svc-employees": "json-server svc/employees/db.json -p 3011 --static ./svc/employees",
     "svc-projects": "json-server svc/projects/db.json -p 3012 --static ./svc/projects",

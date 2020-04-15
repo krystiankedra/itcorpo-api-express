@@ -20,11 +20,8 @@ const getBenefits = async () => {
     getJSONDataForBenefits(),
     getCSVDataForBenefits()
   ]) 
-  return {
-    ...benefits,
-    ...benefitsCSV,
-    ...benefitsJSON
-  }
+
+  return [...benefits, ...benefitsJSON, ...benefitsCSV]
 }
 
 module.exports = {

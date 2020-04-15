@@ -15,7 +15,7 @@ const getDataForBenefits = async () => {
 const getJSONDataForBenefits = () => {
   const fileReader = new FileReader()
   const countryCodeAndExtensions = [ 'DE.json', 'PL.json']
-  const fetchedCountries = countryCodeAndExtensions.map((code) => {
+  const fetchedCountries = countryCodeAndExtensions.flatMap((code) => {
     return JSON.parse(fileReader.getContent(file(code)))
   })
   return fetchedCountries
@@ -23,10 +23,13 @@ const getJSONDataForBenefits = () => {
 
 const getCSVDataForBenefits = async () => {
   const countryCodeAndExtensions = [ 'UK.csv', 'FR.csv']
-  const fetchedCountries = countryCodeAndExtensions.map(code => {
+  const fetchedCountries = countryCodeAndExtensions.flatMap(code => {
     return csv().fromFile(file(code))
   })
-  return await Promise.all(fetchedCountries)
+  const result = await Promise.all(fetchedCountries)
+
+  return result.flat()
+
 }
 
 module.exports = {
